@@ -36,7 +36,7 @@ const Hero = () => {
     </div>
 
     <div className="mx-auto md:order-1 ">
-      <h3 className="text-5xl md:text-5xl text-center font-bold">
+      <h3 className="text-4xl md:text-5xl text-center font-bold">
         Hi, {myName}
       </h3>
       <h3 className="text-3xl text-center md:text-left mb-60 md:mb-0 neon-text">
