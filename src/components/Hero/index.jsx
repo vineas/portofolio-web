@@ -4,7 +4,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-  const myName = "I'm Alvienas";
+  const myName = "I'm Alvienas;";
   const titles = [
     "Software Engineer",
     "Fullstack Developer",
@@ -26,7 +26,6 @@ const Hero = () => {
   return (
 <div className="bg-gray-900">
   <div className="mx-auto container text-center min-h-screen md:h-screen items-center md:text-left text-white grid grid-cols-1 md:grid-cols-2">
-
     <div className="p-4 md:p-0 md:order-2">
       <Image
         src={ava}

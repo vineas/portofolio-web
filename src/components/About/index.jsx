@@ -5,8 +5,8 @@ import photo from "../../assets/img/alvienas.JPG";
 const About = () => {
   return (
     <div id="about" className="w-11/12 md:container mx-auto py-20">
-      <div className="mx-auto container flex flex-col md:flex-row md:space-x-10">
-        <div className="md:w-2/3">
+      <div className="min-h-screen md:h-screen mx-auto container flex flex-col md:flex-row md:space-x-10">
+        <div className="content-center md:w-2/3">
           <Image
             src={photo}
             alt="alvienas"

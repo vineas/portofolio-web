@@ -5,7 +5,6 @@ const Navbar = () => {
 
     return (
         <>
-        
             <div className='bg-gray-900 sticky top-0'>
                 <div className='text-white w-11/12 md:container mx-auto py-4 flex justify-between items-center'>
                     <h2 className='text-3xl font-bold'><Link href={"/"}>VineasWeb</Link></h2>

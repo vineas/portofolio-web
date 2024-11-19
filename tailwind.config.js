@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const { transform } = require('next/dist/build/swc');
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation:{
+        "loop-scroll": "loop-scroll 50s linear infinite"
+      },
+      keyframes: {
+        "loop-scroll": {
+          from:{transform: "translateX(0px)"},
+          to: {transform: "translateX(-100%)"},
+        }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

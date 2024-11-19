@@ -1,55 +1,165 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import reactJS from "../../assets/icons/react.png";
+import bootstrap from "../../assets/icons/bootstrap.png";
+import css from "../../assets/icons/css.png";
+import github from "../../assets/icons/github.png";
+import html from "../../assets/icons/html.png";
+import nodejs from "../../assets/icons/nodejs.png";
+import postgre from "../../assets/icons/postgre.png";
+import javascript from "../../assets/icons/js.png";
+import tailwind from "../../assets/icons/tailwindcss.png";
+import typescript from "../../assets/icons/typescript.png";
+import illustrator from "../../assets/icons/illustrator.png";
+import photoshop from "../../assets/icons/photoshop.png";
+import premiere from "../../assets/icons/premiere-pro.png";
+import indesign from "../../assets/icons/indesign.png";
 
 const Services = () => {
-    return (
-        <div id="services" className='bg-gray-200 py-20'>
-            <div className='w-11/12 md:container mx-auto'>
-                <h3 className='text-5xl font-bold text-center mb-5'>Skills</h3>
-                <p className='text-gray-500 text-center mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis inventore illum autem ex!</p>
+  return (
+    <div id="services" className="bg-gray-200 py-20">
+      <h3 className="text-5xl font-bold text-center mb-9">Skills</h3>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                    {/* services card */}
-                    <div className='flex space-x-5 py-8 px-8 bg-white rounded-xl items-start'>
-                        <img src="https://placehold.co/100" alt="services" />
-                        <div className=''>
-                            <h5 className='text-2xl font-bold mb-5'>Data Analytics</h5>
-                            <p className='text-gray-500 mb-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam minima ea assumenda soluta eius ipsam, aperiam iure vero hic.</p>
-                            <Link href={"/"} className='hover:text-gray-500'> read more</Link>
-                        </div>
-                    </div>                    
-                    {/* services card 2 */}
-                    <div className='flex space-x-5 py-8 px-8 bg-white rounded-xl items-start'>
-                        <img src="https://placehold.co/100" alt="services" />
-                        <div className=''>
-                            <h5 className='text-2xl font-bold mb-5'>Social Media Asisstant</h5>
-                            <p className='text-gray-500 mb-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam minima ea assumenda soluta eius ipsam, aperiam iure vero hic.</p>
-                            <Link href={"/"} className='hover:text-gray-500'> read more</Link>
-                        </div>
-                    </div>              
-                    {/* services card 3*/}
-                    <div className='flex space-x-5 py-8 px-8 bg-white rounded-xl items-start'>
-                        <img src="https://placehold.co/100" alt="services" />
-                        <div className=''>
-                            <h5 className='text-2xl font-bold mb-5'>Developer & Maintanance</h5>
-                            <p className='text-gray-500 mb-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam minima ea assumenda soluta eius ipsam, aperiam iure vero hic.</p>
-                            <Link href={"/"} className='hover:text-gray-500'> read more</Link>
-                        </div>
-                    </div>    
-                    {/* services card 4*/}
-                    <div className='flex space-x-5 py-8 px-8 bg-white rounded-xl items-start'>
-                        <img src="https://placehold.co/100" alt="services" />
-                        <div className=''>
-                            <h5 className='text-2xl font-bold mb-5'>24/7 Protection</h5>
-                            <p className='text-gray-500 mb-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam minima ea assumenda soluta eius ipsam, aperiam iure vero hic.</p>
-                            <Link href={"/"} className='hover:text-gray-500'> read more</Link>
-                        </div>
-                    </div>                                                                                  
-                </div>
-            </div>
+      <div className="flex overflow-hidden space-x-16 group slider">
+        <div className="flex animate-loop-scroll space-x-16 group-hover:paused">
+          <Image
+            src={html}
+            alt="html"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-auto h-auto max-w-[100px]"
+          />
+
+          <Image
+            src={html}
+            alt="html"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-auto h-auto max-w-[100px]"
+          />
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Services
+export default Services;
