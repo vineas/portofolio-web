@@ -156,6 +156,142 @@ const Services = () => {
             alt="indesign"
             className="w-auto h-auto max-w-[100px]"
           />
+
+
+<Image
+            src={html}
+            alt="html"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-auto h-auto max-w-[100px]"
+          />
+
+          <Image
+            src={html}
+            alt="html"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-auto h-auto max-w-[100px]"
+          />
+
         </div>
       </div>
     </div>
