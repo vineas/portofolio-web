@@ -1,16 +1,34 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import portfolioData from "./portofolioApps";
 
 const Portofolio = () => {
   const [activeTab, setActiveTab] = useState("web");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 4;
+  const totalItems = portfolioData.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  const currentData = portfolioData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
+  const handlePrevClick = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNextClick = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
   return (
     <div id="portofolio" className="py-20 bg-white">
-      {/* Tabs navigation */}
       <div className="mb-12">
         <h3 className="text-5xl font-bold text-center mb-3">Portofolio</h3>
         <p className="text-gray-500 text-center">
@@ -56,49 +74,63 @@ const Portofolio = () => {
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
+          {/* Grid untuk data dengan pagination */}
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8">
-            {/* portofolio card 1 */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
+            {currentData.map((item) => (
+              <div key={item.id} className="shadow-xl">
+                <Link href={item.link}>
+                  <img src={item.imageUrl} className="w-full" />
+                  <div className="py-3 px-5">
+                    <h4 className="text-center font-bold">{item.title}</h4>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
 
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Website 1</h4>
-                </div>
-              </Link>
-            </div>
-            {/* portofolio card 2 */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
-
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Website 2</h4>
-                </div>
-              </Link>
-            </div>
-            {/* portofolio card 3 */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
-
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Website 3</h4>
-                </div>
-              </Link>
-            </div>
-            {/* portofolio card 4 */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
-
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Website 4</h4>
-                </div>
-              </Link>
+          {/* Pagination */}
+          <div className="flex flex-col items-center mt-6">
+            <span className="text-sm text-gray-700 dark:text-gray-400">
+              Showing{" "}
+              <span className="font-semibold text-gray-900">
+                {Math.min((currentPage - 1) * itemsPerPage + 1, totalItems)}
+              </span>{" "}
+              to{" "}
+              <span className="font-semibold text-gray-900">
+                {Math.min(currentPage * itemsPerPage, totalItems)}
+              </span>{" "}
+              of{" "}
+              <span className="font-semibold text-gray-900">{totalItems}</span>{" "}
+              Entries
+            </span>
+            {/* Buttons */}
+            <div className="inline-flex mt-2 xs:mt-0">
+              <button
+                onClick={handlePrevClick}
+                className={`flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 ${
+                  currentPage === 1
+                    ? "opacity-50 cursor-not-allowed"
+                    : "dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                }`}
+                disabled={currentPage === 1}
+              >
+                Prev
+              </button>
+              <button
+                onClick={handleNextClick}
+                className={`flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 ${
+                  currentPage === totalPages
+                    ? "opacity-50 cursor-not-allowed"
+                    : "dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                }`}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>
+        
         <div
           className={`${
             activeTab === "design" ? "block opacity-100" : "hidden opacity-0"
@@ -106,7 +138,7 @@ const Portofolio = () => {
           role="tabpanel"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
-            {/* portofolio card 1 */}
+            {/* Placeholder for Design */}
             <div className="shadow-xl">
               <Link href={"/"}>
                 <img src="https://placehold.co/600x400" className="w-full" />
@@ -125,7 +157,7 @@ const Portofolio = () => {
           role="tabpanel"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
-            {/* portofolio card 1 */}
+            {/* Placeholder for Video */}
             <div className="shadow-xl">
               <Link href={"/"}>
                 <img src="https://placehold.co/600x400" className="w-full" />
