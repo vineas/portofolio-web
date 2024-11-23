@@ -1,16 +1,18 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import portfolioData from "./portofolioApps";
+import portfolios from "./portofolio";
+
+const { portfolioApps, portfolioDesign, portfolioVideo } = portfolios;
 
 const Portofolio = () => {
   const [activeTab, setActiveTab] = useState("web");
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 4;
-  const totalItems = portfolioData.length;
+  const totalItems = portfolioApps.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  const currentData = portfolioData.slice(
+  const currentData = portfolioApps.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -77,9 +79,9 @@ const Portofolio = () => {
           {/* Grid untuk data dengan pagination */}
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8">
             {currentData.map((item) => (
-              <div key={item.id} className="shadow-xl">
+              <div key={item.id} className="shadow-xl rounded-xl">
                 <Link href={item.link}>
-                  <img src={item.imageUrl} className="w-full" />
+                  <img src={item.imageUrl} className="w-full rounded-t-xl" />
                   <div className="py-3 px-5">
                     <h4 className="text-center font-bold">{item.title}</h4>
                   </div>
@@ -130,7 +132,7 @@ const Portofolio = () => {
             </div>
           </div>
         </div>
-        
+
         <div
           className={`${
             activeTab === "design" ? "block opacity-100" : "hidden opacity-0"
@@ -138,18 +140,24 @@ const Portofolio = () => {
           role="tabpanel"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
-            {/* Placeholder for Design */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
-
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Design</h4>
-                </div>
-              </Link>
-            </div>
+            {portfolioDesign.map((item) => (
+              <div key={item.id} className="shadow-xl rounded-xl">
+                <Link href={item.link} target="_blank">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full rounded-t-xl"
+                  />
+                  <div className="py-3 px-5">
+                    <h4 className="text-center font-bold">{item.title}</h4>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Video Tab */}
         <div
           className={`${
             activeTab === "video" ? "block opacity-100" : "hidden opacity-0"
@@ -157,16 +165,20 @@ const Portofolio = () => {
           role="tabpanel"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
-            {/* Placeholder for Video */}
-            <div className="shadow-xl">
-              <Link href={"/"}>
-                <img src="https://placehold.co/600x400" className="w-full" />
-
-                <div className="py-3 px-5">
-                  <h4 className="text-center font-bold">Video</h4>
-                </div>
-              </Link>
-            </div>
+            {portfolioVideo.map((item) => (
+              <div key={item.id} className="shadow-xl rounded-xl">
+                <Link href={item.link} target="_blank">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full rounded-t-xl"
+                  />
+                  <div className="py-3 px-5">
+                    <h4 className="text-center font-bold">{item.title}</h4>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>

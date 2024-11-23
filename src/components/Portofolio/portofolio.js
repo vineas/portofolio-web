@@ -1,4 +1,4 @@
-const portfolioData = [
+const portfolioApps = [
     {
       id: 1,
       title: "Blanja",
@@ -30,5 +30,23 @@ const portfolioData = [
       link: "https://niskala-studio.vercel.app/",
     },
   ];
-  
-  export default portfolioData;  
+
+  const portfolioDesign = [
+    {
+      id: 1,
+      title: "Behance",
+      imageUrl: "https://placehold.co/600x400",
+      link: "https://www.behance.net/gallery/213163173/Portofolio-Project?",
+    },
+  ];
+
+  const portfolioVideo = [
+    {
+      id: 1,
+      title: "Youtube",
+      imageUrl: "https://placehold.co/600x400",
+      link: "https://www.youtube.com/@Vineas11",
+    },
+  ];
+
+  export default { portfolioApps, portfolioDesign, portfolioVideo };
