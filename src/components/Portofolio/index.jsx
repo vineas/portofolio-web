@@ -83,7 +83,7 @@ const Portofolio = () => {
                 <Link href={item.link}>
                   <img src={item.imageUrl} className="w-full rounded-t-xl" />
                   <div className="py-3 px-5">
-                    <h4 className="text-center font-bold">{item.title}</h4>
+                    <h4 className="text-center font-bold text-sm md:text-lg">{item.title}</h4>
                   </div>
                 </Link>
               </div>
