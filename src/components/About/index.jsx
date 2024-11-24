@@ -19,16 +19,10 @@ const About = () => {
               About Me
             </h3>
             <p className="mb-5 text-center md:text-justify md:pr-20">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-              iure sint totam temporibus quos cupiditate dolorum voluptates,
-              accusantium odio ipsum eos. Vitae quia assumenda nesciunt odio
-              libero esse quasi eveniet.
+            My name is Alvienas Yandika, commonly known as Alvin. Bachelor of Science in Computer Science from Sunan Gunung Djati Bandung. Proficient in HTML, CSS, JavaScript, TypeScript, React, Express, and React Native. Experienced in software development, graphic design, and video editing.
             </p>
             <p className="mb-5 pb-5 text-center md:text-justify md:pr-20">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              vel mollitia culpa repudiandae nostrum illum. Praesentium possimus
-              exercitationem rem, qui incidunt laudantium obcaecati veritatis
-              facilis.
+            Possess a strong understanding of design patterns, algorithms, and full-stack development concepts. Passionate about continuous learning, teamwork, and solving problems through innovative and creative solutions.
             </p>
           </div>
         </div>
