@@ -9,7 +9,9 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from "next/image";
+import { VT323 } from "next/font/google";
+const vT = VT323({ subsets: ["latin"], weight: "400" });
+
 
 const navigation = [
   { name: "About", href: "#about", current: true },
@@ -25,8 +27,8 @@ const NavBar = () => {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                <div className="flex flex-shrink-0 items-center text-4xl md:text-4xl font-bold text-white">
+                    <h2 className={vT.className}>
                       <Link href={"/"}>VineasWeb</Link>
                     </h2>
                 </div>
