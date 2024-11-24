@@ -32,11 +32,11 @@ const Portofolio = () => {
   return (
     <div id="portofolio" className="py-20 bg-white">
       <div className="mb-12">
-        <h3 className="text-5xl font-bold text-center mb-3">Portofolio</h3>
-        <p className="text-gray-500 text-center">
+        <h3 className="text-5xl font-bold text-center mb-3">Portfolio</h3>
+        {/* <p className="text-gray-500 text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga,
           veritatis.
-        </p>
+        </p> */}
       </div>
       <ul
         className="mb-5 flex list-none flex-wrap ps-0 md:flex-row justify-center"
@@ -139,7 +139,7 @@ const Portofolio = () => {
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
+          <div className="md:container mx-auto justify-center " style={{ width: "280px" }}>
             {portfolioDesign.map((item) => (
               <div key={item.id} className="shadow-xl rounded-xl">
                 <Link href={item.link} target="_blank">
@@ -164,7 +164,7 @@ const Portofolio = () => {
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8 justify-center">
+          <div className="md:container mx-auto justify-center " style={{ width: "280px" }}>
             {portfolioVideo.map((item) => (
               <div key={item.id} className="shadow-xl rounded-xl">
                 <Link href={item.link} target="_blank">

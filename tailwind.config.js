@@ -3,6 +3,7 @@
 const { transform } = require('next/dist/build/swc');
 
 module.exports = {
+  mode: 'jit',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
