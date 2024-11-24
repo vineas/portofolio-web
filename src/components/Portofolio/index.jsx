@@ -30,7 +30,7 @@ const Portofolio = () => {
   };
 
   return (
-    <div id="portofolio" className="py-20 bg-white">
+    <div id="portfolio" className="py-20 bg-white">
       <div className="mb-12">
         <h3 className="text-5xl font-bold text-center mb-3">Portfolio</h3>
         {/* <p className="text-gray-500 text-center">

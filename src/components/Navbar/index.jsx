@@ -14,7 +14,7 @@ import Image from "next/image";
 const navigation = [
   { name: "About", href: "#about", current: true },
   { name: "Skills", href: "#services", current: false },
-  { name: "Portofolio", href: "#portofolio", current: false },
+  { name: "Portfolio", href: "#portfolio", current: false },
 ];
 
 const NavBar = () => {
