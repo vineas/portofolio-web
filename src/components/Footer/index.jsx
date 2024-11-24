@@ -1,4 +1,6 @@
 import React from "react";
+import { VT323 } from "next/font/google";
+const vT = VT323({ subsets: ["latin"], weight: "400" });
 
 const Footer = () => {
   return (
@@ -10,8 +12,10 @@ const Footer = () => {
               href="https://flowbite.com/"
               className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
             >
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+              <span className="self-center text-3xl font-semibold whitespace-nowrap text-white">
+                <div className={vT.className}>
                 VineasWeb
+                </div>
               </span>
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
