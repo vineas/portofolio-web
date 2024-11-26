@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import reactJS from "../../assets/icons/react.png";
 import bootstrap from "../../assets/icons/bootstrap.png";
@@ -22,276 +21,290 @@ const Services = () => {
       <h3 className="text-5xl font-bold text-center mb-9">Skills</h3>
 
       <div className="flex overflow-hidden space-x-16 group slider">
-        <div className="flex animate-loop-scroll space-x-16 group-hover:paused">
+        <div className="flex animate-loop-scroll space-x-16 group-hover:paused md:w-auto">
           <Image
             src={html}
             alt="html"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
-          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={css}
+            alt="css"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
           <Image
             src={javascript}
             alt="javascript"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={typescript}
             alt="typescript"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={reactJS}
             alt="react"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={nodejs}
             alt="nodejs"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={tailwind}
             alt="tailwind"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={bootstrap}
             alt="bootstrap"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={postgre}
             alt="postgre"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={github}
             alt="github"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={illustrator}
             alt="illustrator"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={photoshop}
             alt="photoshop"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={premiere}
             alt="premiere"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={indesign}
             alt="indesign"
-            className="w-auto h-auto max-w-[100px]"
-          />
-
-          <Image
-            src={html}
-            alt="html"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
-          <Image
-            src={javascript}
-            alt="javascript"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={typescript}
-            alt="typescript"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={reactJS}
-            alt="react"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={nodejs}
-            alt="nodejs"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={tailwind}
-            alt="tailwind"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={bootstrap}
-            alt="bootstrap"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={postgre}
-            alt="postgre"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={github}
-            alt="github"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={illustrator}
-            alt="illustrator"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={photoshop}
-            alt="photoshop"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={premiere}
-            alt="premiere"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={indesign}
-            alt="indesign"
-            className="w-auto h-auto max-w-[100px]"
-          />
-
-
-<Image
-            src={html}
-            alt="html"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
-          <Image
-            src={javascript}
-            alt="javascript"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={typescript}
-            alt="typescript"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={reactJS}
-            alt="react"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={nodejs}
-            alt="nodejs"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={tailwind}
-            alt="tailwind"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={bootstrap}
-            alt="bootstrap"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={postgre}
-            alt="postgre"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={github}
-            alt="github"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={illustrator}
-            alt="illustrator"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={photoshop}
-            alt="photoshop"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={premiere}
-            alt="premiere"
-            className="w-auto h-auto max-w-[100px]"
-          />
-          <Image
-            src={indesign}
-            alt="indesign"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
 
           <Image
             src={html}
             alt="html"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
-          <Image src={css} alt="css" className="w-auto h-auto max-w-[100px]" />
+          <Image
+            src={css}
+            alt="css"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
           <Image
             src={javascript}
             alt="javascript"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={typescript}
             alt="typescript"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={reactJS}
             alt="react"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={nodejs}
             alt="nodejs"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={tailwind}
             alt="tailwind"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={bootstrap}
             alt="bootstrap"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={postgre}
             alt="postgre"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={github}
             alt="github"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={illustrator}
             alt="illustrator"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={photoshop}
             alt="photoshop"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={premiere}
             alt="premiere"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
           <Image
             src={indesign}
             alt="indesign"
-            className="w-auto h-auto max-w-[100px]"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
           />
 
+          <Image
+            src={html}
+            alt="html"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={css}
+            alt="css"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+
+          <Image
+            src={html}
+            alt="html"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={css}
+            alt="css"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={javascript}
+            alt="javascript"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={typescript}
+            alt="typescript"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={reactJS}
+            alt="react"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={nodejs}
+            alt="nodejs"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={tailwind}
+            alt="tailwind"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={bootstrap}
+            alt="bootstrap"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={postgre}
+            alt="postgre"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={github}
+            alt="github"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={illustrator}
+            alt="illustrator"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={photoshop}
+            alt="photoshop"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={premiere}
+            alt="premiere"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
+          <Image
+            src={indesign}
+            alt="indesign"
+            className="w-12 md:w-auto h-auto max-w-[100px]"
+          />
         </div>
       </div>
     </div>
