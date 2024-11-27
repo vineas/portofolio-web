@@ -11,9 +11,7 @@ const CardPortfolio = (props) => {
 const Header = (props) => {
   const { image } = props;
   return (
-    <a href="#">
-      <img src={image} alt="portfolio" className="w-full rounded-t-xl" />
-    </a>
+      <img src={image} alt="portfolio" className="w-full rounded-t-xl"/>
   );
 };
   
