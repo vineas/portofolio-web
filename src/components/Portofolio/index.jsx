@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import portfolios from "./portofolio";
+import CardPortfolio from "../Fragments/CardPortfolio";
 
 const { portfolioApps, portfolioDesign, portfolioVideo } = portfolios;
 
@@ -9,10 +10,11 @@ const Portofolio = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 4;
-  const totalItems = portfolioApps.length;
+  const sortedData = [...portfolioApps].sort((a, b) => b.id - a.id); // Urutkan descending berdasarkan `id`
+  const totalItems = sortedData.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  const currentData = portfolioApps.slice(
+  const currentData = sortedData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -76,17 +78,15 @@ const Portofolio = () => {
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
-          {/* Grid untuk data dengan pagination */}
+          {/* Apps Portfolio */}
           <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8">
             {currentData.map((item) => (
-              <div key={item.id} className="shadow-xl rounded-xl">
+              <CardPortfolio key={item.id}>
                 <Link href={item.link}>
-                  <img src={item.imageUrl} className="w-full rounded-t-xl" />
-                  <div className="py-3 px-5">
-                    <h4 className="text-center font-bold text-sm md:text-lg">{item.title}</h4>
-                  </div>
+                  <CardPortfolio.Header image={item.imageUrl} />
+                  <CardPortfolio.Body>{item.title}</CardPortfolio.Body>
                 </Link>
-              </div>
+              </CardPortfolio>
             ))}
           </div>
 
@@ -133,13 +133,17 @@ const Portofolio = () => {
           </div>
         </div>
 
+        {/* Design Portfolio */}
         <div
           className={`${
             activeTab === "design" ? "block opacity-100" : "hidden opacity-0"
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
-          <div className="md:container mx-auto justify-center " style={{ width: "280px" }}>
+          <div
+            className="md:container mx-auto justify-center "
+            style={{ width: "280px" }}
+          >
             {portfolioDesign.map((item) => (
               <div key={item.id} className="shadow-xl rounded-xl">
                 <Link href={item.link} target="_blank">
@@ -157,14 +161,17 @@ const Portofolio = () => {
           </div>
         </div>
 
-        {/* Video Tab */}
+        {/* Video Portfolio */}
         <div
           className={`${
             activeTab === "video" ? "block opacity-100" : "hidden opacity-0"
           } transition-opacity duration-150 ease-linear`}
           role="tabpanel"
         >
-          <div className="md:container mx-auto justify-center " style={{ width: "280px" }}>
+          <div
+            className="md:container mx-auto justify-center "
+            style={{ width: "280px" }}
+          >
             {portfolioVideo.map((item) => (
               <div key={item.id} className="shadow-xl rounded-xl">
                 <Link href={item.link} target="_blank">
