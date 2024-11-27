@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import portfolios from "./portofolio";
 import CardPortfolio from "../Fragments/CardPortfolio";
+import PaginationPortfolio from "../Fragments/PaginationPortfolio";
 
 const { portfolioApps, portfolioDesign, portfolioVideo } = portfolios;
 
@@ -91,46 +92,27 @@ const Portofolio = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex flex-col items-center mt-6">
-            <span className="text-sm text-gray-700 dark:text-gray-400">
-              Showing{" "}
-              <span className="font-semibold text-gray-900">
-                {Math.min((currentPage - 1) * itemsPerPage + 1, totalItems)}
-              </span>{" "}
-              to{" "}
-              <span className="font-semibold text-gray-900">
-                {Math.min(currentPage * itemsPerPage, totalItems)}
-              </span>{" "}
-              of{" "}
-              <span className="font-semibold text-gray-900">{totalItems}</span>{" "}
-              Entries
-            </span>
-            {/* Buttons */}
+          <PaginationPortfolio>
+            <PaginationPortfolio.PaginationInfo
+              currentPage={currentPage}
+              itemsPerPage={itemsPerPage}
+              totalItems={totalItems}
+            />
             <div className="inline-flex mt-2 xs:mt-0">
-              <button
+              <PaginationPortfolio.PaginationButton
                 onClick={handlePrevClick}
-                className={`flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 ${
-                  currentPage === 1
-                    ? "opacity-50 cursor-not-allowed"
-                    : "dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                }`}
                 disabled={currentPage === 1}
               >
                 Prev
-              </button>
-              <button
+              </PaginationPortfolio.PaginationButton>
+              <PaginationPortfolio.PaginationButton
                 onClick={handleNextClick}
-                className={`flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 ${
-                  currentPage === totalPages
-                    ? "opacity-50 cursor-not-allowed"
-                    : "dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                }`}
                 disabled={currentPage === totalPages}
               >
                 Next
-              </button>
+              </PaginationPortfolio.PaginationButton>
             </div>
-          </div>
+          </PaginationPortfolio>{" "}
         </div>
 
         {/* Design Portfolio */}
@@ -145,18 +127,12 @@ const Portofolio = () => {
             style={{ width: "280px" }}
           >
             {portfolioDesign.map((item) => (
-              <div key={item.id} className="shadow-xl rounded-xl">
-                <Link href={item.link} target="_blank">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full rounded-t-xl"
-                  />
-                  <div className="py-3 px-5">
-                    <h4 className="text-center font-bold">{item.title}</h4>
-                  </div>
+              <CardPortfolio key={item.id}>
+                <Link href={item.link}>
+                  <CardPortfolio.Header image={item.imageUrl} />
+                  <CardPortfolio.Body>{item.title}</CardPortfolio.Body>
                 </Link>
-              </div>
+              </CardPortfolio>
             ))}
           </div>
         </div>
@@ -173,18 +149,12 @@ const Portofolio = () => {
             style={{ width: "280px" }}
           >
             {portfolioVideo.map((item) => (
-              <div key={item.id} className="shadow-xl rounded-xl">
-                <Link href={item.link} target="_blank">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full rounded-t-xl"
-                  />
-                  <div className="py-3 px-5">
-                    <h4 className="text-center font-bold">{item.title}</h4>
-                  </div>
+              <CardPortfolio key={item.id}>
+                <Link href={item.link}>
+                  <CardPortfolio.Header image={item.imageUrl} />
+                  <CardPortfolio.Body>{item.title}</CardPortfolio.Body>
                 </Link>
-              </div>
+              </CardPortfolio>
             ))}
           </div>
         </div>
